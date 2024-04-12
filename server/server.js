@@ -68,7 +68,7 @@ app.get("/recipeStream", (req, res) => {
 })
 
 async function fetchOpenAICompletionsStream(messages, callback) {
-  const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const aiModel = "gpt-3.5-turbo";
 
   try {
